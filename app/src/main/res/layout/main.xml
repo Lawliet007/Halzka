@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/strokeWidthPlusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SW+" />
+
+        <Button
+            android:id="@+id/strokeWidthMinusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SW-" />
+
+        <Button
+            android:id="@+id/changeColorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color" />
+
+        <Button
+            android:id="@+id/undoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView4"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView5"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView6"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView7"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView8"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <me.panavtec.drawableview.DrawableView
+            android:id="@+id/paintView9"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+</LinearLayout>
