@@ -7,22 +7,27 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button btnPlay, btnExit;
+    private Button btnPlayHuman, btnExit, btnPlayComputer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnPlay = findViewById(R.id.btnPlay);
+        btnPlayHuman = findViewById(R.id.btnPlayHuman);
         btnExit = findViewById(R.id.btnExit);
-        btnPlay.setOnClickListener(this);
+        btnPlayHuman.setOnClickListener(this);
         btnExit.setOnClickListener(this);
+        btnPlayComputer = findViewById(R.id.btnPlayComputer);
+        btnPlayComputer.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btnPlay:
-                goToGameActivity();
+            case R.id.btnPlayHuman:
+                goToGameActivity(1);
+                break;
+            case R.id.btnPlayComputer:
+                goToGameActivity(2);
                 break;
             case R.id.btnExit:
                 finish();
@@ -30,8 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void goToGameActivity(){
+    public void goToGameActivity(Integer code){
+//        Intent intent = new Intent(this,GameActivityNew.class);
         Intent intent = new Intent(this,GameActivity.class);
+        intent.putExtra("code",code);
         startActivity(intent);
     }
 }

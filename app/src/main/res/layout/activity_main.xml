@@ -2,17 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu"
     android:gravity="center"
     android:orientation="vertical">
 
 
     <Button
-        android:id="@+id/btnPlay"
-        android:layout_width="match_parent"
+        android:id="@+id/btnPlayComputer"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:text="Тоглох" />
+        android:background="@drawable/one" />
+
+    <Button
+        android:id="@+id/btnPlayHuman"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/two" />
 
     <Button
         android:id="@+id/btnExit"
@@ -21,5 +31,6 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="10dp"
-        android:text="Гарах" />
+        android:text="Гарах"
+        android:visibility="gone" />
 </LinearLayout>
