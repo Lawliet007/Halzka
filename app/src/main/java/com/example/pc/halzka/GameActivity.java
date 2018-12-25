@@ -52,10 +52,9 @@ public class GameActivity extends Activity implements View.OnClickListener{
     private PointF mTmpPiont = new PointF();
     private float mLastX;
     private float mLastY;
-    /// x = 0, o = 1
-    private int turn = -1, code = 1;
+    private int code = 1;
     private String lastTurn = "";
-    DrawView last_location;
+
 
     class GameActivity01 implements View.OnTouchListener {
         GameActivity01() {
@@ -446,7 +445,12 @@ public class GameActivity extends Activity implements View.OnClickListener{
 
             else if(checkWinner() == null && filledCells.size() < 9){
                 if(code == 2 && filledCells.size() < 9){
-                    moveBot(getRandomNumber());
+                    String tempboard[] = board;
+                    MiniMax miniMax = new MiniMax(tempboard,lastTurn);
+                    int bestMove = miniMax.getBestMove();
+                    Log.v("checkMinMax","bestMove = " + bestMove);
+//                    moveBot(getRandomNumber());
+                    moveBot(bestMove);
                 }
             }
         }
@@ -454,7 +458,12 @@ public class GameActivity extends Activity implements View.OnClickListener{
     }
 
     public void moveBot(int index){
+        Log.v("botMove","moveBot called, last turn = " + lastTurn + " index = " + index);
+        for(int i = 0; i < 9; i++){
+            Log.v("botMove","moveBot called, value = " + i + " " + board[i]);
+        }
         if(board[index] == null){
+            Log.v("botMove","index = " + index);
             String result = "";
             filledCells.add(index);
             if(lastTurn.equals("x")){
@@ -491,6 +500,8 @@ public class GameActivity extends Activity implements View.OnClickListener{
         int randomNumber = random.nextInt((emptyCells.size() - 0));
         return emptyCells.get(randomNumber);
     }
+
+
 
     public void toastShowWinner(){
 
